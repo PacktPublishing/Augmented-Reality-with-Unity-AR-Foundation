@@ -34,8 +34,7 @@ public class MovePicture : MonoBehaviour
     void MoveObject(Vector2 touchPosition)
     {
         Ray ray = camera.ScreenPointToRay(touchPosition);
-        RaycastHit picHit;
-        if (Physics.Raycast(ray, out picHit, Mathf.Infinity, layerMask))
+        if (Physics.Raycast(ray, Mathf.Infinity, layerMask))
         {
             if (raycaster.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
             {
