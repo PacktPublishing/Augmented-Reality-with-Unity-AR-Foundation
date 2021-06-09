@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SelectImageMode : MonoBehaviour
 {
-    private void OnEnable()
+    void OnEnable()
     {
         UIController.ShowUI("SelectImage");
     }

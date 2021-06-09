@@ -7,7 +7,7 @@ public class ScanMode : MonoBehaviour
 {
     [SerializeField] ARPlaneManager planeManager;
 
-    private void OnEnable()
+     void OnEnable()
     {
         UIController.ShowUI("Scan");
     }

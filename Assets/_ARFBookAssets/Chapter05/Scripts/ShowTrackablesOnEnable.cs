@@ -16,10 +16,11 @@ public class ShowTrackablesOnEnable : MonoBehaviour
         cloudManager = sessionOrigin.GetComponent<ARPointCloudManager>();
     }
 
-    private void Start()
+     void Start()
     {
         isStarted = true;
     }
+
     void OnEnable()
     {
         ShowTrackables(true);

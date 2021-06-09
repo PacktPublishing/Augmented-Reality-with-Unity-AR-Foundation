@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
+    public string planetName = "Earth";
+    public string description;
+
     [SerializeField] private float inclineDegrees = 23.4f;
     [SerializeField] private float rotationPeriodHours = 24f;
     [SerializeField] private Transform incline;

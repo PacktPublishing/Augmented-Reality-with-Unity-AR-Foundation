@@ -5,7 +5,7 @@ using UnityEngine;
 public class NonARMode : MonoBehaviour
 {
     // placeholder for non-AR interaction mode 
-    private void OnEnable()
+     void OnEnable()
     {
         UIController.ShowUI("NonAR");
     }

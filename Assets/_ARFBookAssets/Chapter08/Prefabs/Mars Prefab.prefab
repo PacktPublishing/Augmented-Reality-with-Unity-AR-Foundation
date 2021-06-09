@@ -66,19 +66,27 @@ PrefabInstance:
     - target: {fileID: 6360439055233934402, guid: f4cf67956a2094b49a17aa2b11ff0d01, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ece9f793a7b355d4aa74a8162491cf6b, type: 2}
+      objectReference: {fileID: 2100000, guid: 48f52cf764049e646ad974270a280bd4, type: 2}
     - target: {fileID: 7910614362184675104, guid: f4cf67956a2094b49a17aa2b11ff0d01, type: 3}
       propertyPath: planetName
-      value: Earth
+      value: Mars
       objectReference: {fileID: 0}
     - target: {fileID: 7910614362184675104, guid: f4cf67956a2094b49a17aa2b11ff0d01, type: 3}
       propertyPath: description
-      value: 'Earth is the third planet from the Sun and the only astronomical object
-        known to harbor and support life. '
+      value: Mars is the fourth planet from the Sun and the second-smallest planet
+        in the Solar System
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910614362184675104, guid: f4cf67956a2094b49a17aa2b11ff0d01, type: 3}
+      propertyPath: inclineDegrees
+      value: 25.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910614362184675104, guid: f4cf67956a2094b49a17aa2b11ff0d01, type: 3}
+      propertyPath: rotationPeriodHours
+      value: 24.7
       objectReference: {fileID: 0}
     - target: {fileID: 9122447063536418885, guid: f4cf67956a2094b49a17aa2b11ff0d01, type: 3}
       propertyPath: m_Name
-      value: Earth Prefab
+      value: Mars Prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4cf67956a2094b49a17aa2b11ff0d01, type: 3}

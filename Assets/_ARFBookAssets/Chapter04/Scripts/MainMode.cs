@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMode : MonoBehaviour
 {
-    private void OnEnable()
+    void OnEnable()
     {
         UIController.ShowUI("Main");
     }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1101590468677614487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Incline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7736728346189540233}
   - component: {fileID: 6360439055233934402}
   - component: {fileID: 4535357939312311984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811844501790484490}
   - component: {fileID: 7910614362184675104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Planet Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,8 +170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c7132d3eaa353479f82b5d525968ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planetName: 
+  description: 
   inclineDegrees: 23.4
   rotationPeriodHours: 24
-  animationHoursPerSecond: 1
   incline: {fileID: 1101590468677614487}
   planet: {fileID: 1899271531855895020}
+  animationHoursPerSecond: 1

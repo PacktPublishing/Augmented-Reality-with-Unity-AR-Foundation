@@ -5,7 +5,7 @@ using UnityEngine.XR.ARFoundation;
 
 public class StartupMode : MonoBehaviour
 {
-    private void OnEnable()
+     void OnEnable()
     {
         UIController.ShowUI("Startup");
     }
