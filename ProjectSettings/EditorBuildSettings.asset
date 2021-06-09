@@ -26,10 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_ARFBookAssets/Chapter06/Scenes/ARGallery.unity
     guid: aa19d614e20173242abcd7dea3bfeb15
-  - enabled: 0
+  - enabled: 1
     path: Assets/_ARFBookAssets/Chapter07/Scenes/ARGallery07.unity
     guid: 3d39f4cdf066eb34fb5c96f9e7dc433a
-  - enabled: 1
+  - enabled: 0
     path: Assets/_ARFBookAssets/Chapter08/Scenes/PlanetsScene.unity
     guid: 3f821ac8510163d4fa6185604c0d4faa
   m_configObjects:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class ResizePicture : MonoBehaviour
@@ -16,6 +17,7 @@ public class ResizePicture : MonoBehaviour
     public void OnResizeObject()
     {
         if (!enabled) return;
+        if (EventSystem.current.IsPointerOverGameObject(0)) return;
 
         Touchscreen ts = Touchscreen.current;
         if (ts.touches[0].isInProgress && ts.touches[1].isInProgress)
