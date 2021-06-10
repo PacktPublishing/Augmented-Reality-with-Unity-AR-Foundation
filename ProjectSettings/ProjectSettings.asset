@@ -683,6 +683,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     1: RH_SerializedDictionary
+    4: RH_SerializedDictionary
     7: RH_SerializedDictionary
   additionalCompilerArguments: {}
   platformArchitecture: {}
@@ -773,7 +774,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
