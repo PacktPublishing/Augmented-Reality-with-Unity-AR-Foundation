@@ -45,11 +45,20 @@ public class AnimatedPrompt : MonoBehaviour
             case InstructionUI.CrossPlatformFindAPlane:
                 animationManager.ShowCrossPlatformFindAPlane();
                 break;
-            case InstructionUI.TapToPlace:
-                animationManager.ShowTapToPlace();
+            case InstructionUI.FindAFace:
+                animationManager.ShowFindFace();
+                break;
+            case InstructionUI.FindABody:
+                animationManager.ShowFindBody();
                 break;
             case InstructionUI.FindAnImage:
                 animationManager.ShowFindImage();
+                break;
+            case InstructionUI.FindAnObject:
+                animationManager.ShowFindObject();
+                break;
+            case InstructionUI.TapToPlace:
+                animationManager.ShowTapToPlace();
                 break;
             default:
                 Debug.LogError("instruction switch missing, please edit AnimatedPrompt.cs " + instruction);

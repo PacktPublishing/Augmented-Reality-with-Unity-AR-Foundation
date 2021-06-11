@@ -29,9 +29,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_ARFBookAssets/Chapter07/Scenes/ARGallery07.unity
     guid: 3d39f4cdf066eb34fb5c96f9e7dc433a
-  - enabled: 1
+  - enabled: 0
     path: Assets/_ARFBookAssets/Chapter08/Scenes/PlanetsScene.unity
     guid: 3f821ac8510163d4fa6185604c0d4faa
+  - enabled: 1
+    path: Assets/_ARFBookAssets/Chapter09/Scenes/FaceTracking.unity
+    guid: 9e744cae7409b70468ab77d222f2a75f
+  - enabled: 0
+    path: Assets/ARF-samples/Scenes/FaceTracking/FacePose.unity
+    guid: d8b65509a10894e1dbb93c799ececfd9
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 52e3a42e56188c24e8b66b1d1fb1fb37, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: b48d5aef929a5d24798272e2a3136127, type: 2}

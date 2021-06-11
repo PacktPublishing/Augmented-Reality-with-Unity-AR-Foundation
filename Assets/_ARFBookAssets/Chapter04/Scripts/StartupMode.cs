@@ -5,6 +5,8 @@ using UnityEngine.XR.ARFoundation;
 
 public class StartupMode : MonoBehaviour
 {
+    [SerializeField] string nextMode = "Scan";
+
      void OnEnable()
     {
         UIController.ShowUI("Startup");
@@ -19,7 +21,7 @@ public class StartupMode : MonoBehaviour
         else if (ARSession.state >= ARSessionState.Ready)
         {
             Debug.Log("state " + ARSession.state);
-            InteractionController.EnableMode("Scan");
+            InteractionController.EnableMode(nextMode);
         }
     }
 }

@@ -250,7 +250,7 @@ MonoBehaviour:
   m_LightEstimationMode: -1
   m_AutoFocus: 1
   m_LightEstimation: -1
-  m_FacingDirection: 1
+  m_FacingDirection: 2
 --- !u!114 &70533656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5977163238016480453, guid: 29251f2f7c5044cce8e7eb862b4d93ef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5977163238016480458, guid: 29251f2f7c5044cce8e7eb862b4d93ef, type: 3}
       propertyPath: m_Enabled
@@ -742,6 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51629297f7be8444b99adec1644528f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextMode: Main
 --- !u!1 &472770310
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &541923867
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1037,7 +1038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AttemptUpdate: 1
   m_MatchFrameRate: 1
-  m_TrackingMode: 2
+  m_TrackingMode: 1
 --- !u!4 &640979191
 Transform:
   m_ObjectHideFlags: 0
@@ -1308,7 +1309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1ad977b642a04468d8278ac1e01f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instruction: 0
+  instruction: 1
   animationManager: {fileID: 71425404}
 --- !u!1 &1138345738
 GameObject:
@@ -1727,6 +1728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1558300128}
   - component: {fileID: 1558300129}
+  - component: {fileID: 1558300130}
   m_Layer: 0
   m_Name: Main Mode
   m_TagString: Untagged
@@ -1758,6 +1760,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69a243c5cdb828f4aa6e6ec8fb65e262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1558300130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558300127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed95c1a488e35394da3bb88ce7193f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1558906532
@@ -1849,7 +1863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caeceacb624484daf8e379c2252fd246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FacePrefab: {fileID: 0}
+  m_FacePrefab: {fileID: 3190010580146568014, guid: 2a1c24c2b70ce17459fc08d07bc42c38, type: 3}
   m_MaximumFaceCount: 1
 --- !u!114 &1565265814
 MonoBehaviour:
@@ -2069,6 +2083,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd3981102a12c6a4eab21ff7322210df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1818677190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 183544, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_Name
+      value: LunarConsole
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 406632, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d0acc00cc82d436b9d11446d2ddfef6, type: 3}
 --- !u!1 &1870314259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,10 +2180,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1870314259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313d76f6645b896458d230a430bc65d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 82fe191b1c3bcf840a6c51112298abf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planeManager: {fileID: 0}
+  faceManager: {fileID: 1565265813}
 --- !u!1 &2069791063
 GameObject:
   m_ObjectHideFlags: 0
