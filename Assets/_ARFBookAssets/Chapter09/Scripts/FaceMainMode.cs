@@ -5,6 +5,7 @@ using UnityEngine.XR.ARFoundation;
 
 public class FaceMainMode : MonoBehaviour
 {
+    [SerializeField] GameObject materialzeablePrefab; // eg AR Default Prefab
     [SerializeField] ARFaceManager faceManager;
 
     void OnEnable()
@@ -12,9 +13,27 @@ public class FaceMainMode : MonoBehaviour
         UIController.ShowUI("Main");
     }
 
+    public void ChangeFaceMaterial(Material mat)
+    {
+        StartCoroutine(_DoChangeFaceMaterial(mat));
+    }
+
+    IEnumerator _DoChangeFaceMaterial(Material mat)
+    {
+        yield return ChangeFacePrefab(materialzeablePrefab);
+
+        foreach (ARFace trackable in faceManager.trackables)
+        {
+            ChangeableFace changeable = trackable.GetComponent<ChangeableFace>();
+            changeable.ChangeMaterial(mat);
+        }
+    }
     public void ChangeFacePrefab(GameObject prefab)
     {
-        StartCoroutine(_DoChangeFacePrefab(prefab));
+        if (faceManager.facePrefab != prefab)
+        {
+            StartCoroutine(_DoChangeFacePrefab(prefab));
+        }
     }
 
     //IEnumerator _DoChangeFacePrefab(GameObject prefab)
@@ -53,21 +72,13 @@ public class FaceMainMode : MonoBehaviour
         faceManager.facePrefab = prefab;
     }
 
-    public void ChangeFaceMaterial(Material mat)
-    {
-        foreach (ARFace trackable in faceManager.trackables)
-        {
-            ChangeableFace changeable = trackable.GetComponent<ChangeableFace>();
-            changeable.ChangeMaterial(mat);
-        }
-    }
-
-    public void ChangeFaceObject(string name)
-    {
-        foreach (ARFace trackable in faceManager.trackables)
-        {
-            ChangeableFace changeable = trackable.GetComponent<ChangeableFace>();
-            changeable.ChangeFace(name);
-        }
-    }
+ 
+    //public void ChangeFaceObject(string name)
+    //{
+    //    foreach (ARFace trackable in faceManager.trackables)
+    //    {
+    //        ChangeableFace changeable = trackable.GetComponent<ChangeableFace>();
+    //        changeable.ChangeFace(name);
+    //    }
+    //}
 }

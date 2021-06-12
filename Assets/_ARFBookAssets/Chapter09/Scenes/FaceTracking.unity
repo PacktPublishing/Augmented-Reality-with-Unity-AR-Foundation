@@ -577,11 +577,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1558300129}
         m_TargetAssemblyTypeName: FaceMainMode, Assembly-CSharp
-        m_MethodName: ChangeFacePrefab
+        m_MethodName: ChangeFaceMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3190010580146568014, guid: 783748f01f583154e9a59e163a36ccb6, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: 8d9c1fbd4e6ac904c814b0aa43a466b7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1281,11 +1281,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1558300129}
         m_TargetAssemblyTypeName: FaceMainMode, Assembly-CSharp
-        m_MethodName: ChangeFacePrefab
+        m_MethodName: ChangeFaceMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3190010580146568014, guid: 9d1d50bea0e961647ac71e5793c6ea11, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: 714d8091033260d41be8f46b29c9df38, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3251,6 +3251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc939a3b8451cd044aba2911a2e09122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialzeablePrefab: {fileID: 3190010580146568014, guid: b54aed1227baf9d49958e1b20e98c407, type: 3}
   faceManager: {fileID: 1565265813}
 --- !u!114 &1558300130
 MonoBehaviour:
@@ -3259,7 +3260,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558300127}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed95c1a488e35394da3bb88ce7193f66, type: 3}
   m_Name: 
@@ -3441,7 +3442,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1565265816}
   - component: {fileID: 1565265815}
-  - component: {fileID: 1565265814}
   - component: {fileID: 1565265813}
   m_Layer: 0
   m_Name: AR Session Origin
@@ -3462,21 +3462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caeceacb624484daf8e379c2252fd246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FacePrefab: {fileID: 3190010580146568014, guid: 2a1c24c2b70ce17459fc08d07bc42c38, type: 3}
+  m_FacePrefab: {fileID: 3190010580146568014, guid: b54aed1227baf9d49958e1b20e98c407, type: 3}
   m_MaximumFaceCount: 1
---- !u!114 &1565265814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565265812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RaycastPrefab: {fileID: 0}
 --- !u!114 &1565265815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3723,11 +3710,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1558300129}
         m_TargetAssemblyTypeName: FaceMainMode, Assembly-CSharp
-        m_MethodName: ChangeFacePrefab
+        m_MethodName: ChangeFaceMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3190010580146568014, guid: 2a1c24c2b70ce17459fc08d07bc42c38, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: 60550b3d96d7f8b43849d34f22c75dd8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4125,11 +4112,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1558300129}
         m_TargetAssemblyTypeName: FaceMainMode, Assembly-CSharp
-        m_MethodName: ChangeFacePrefab
+        m_MethodName: ChangeFaceMaterial
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3190010580146568014, guid: 1e74987587176fc4e9e4fec3100880a2, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 2100000, guid: 5559738888f76804ba7b411ecf008db7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

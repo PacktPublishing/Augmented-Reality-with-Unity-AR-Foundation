@@ -30,9 +30,10 @@ public class InteractionController : Singleton<InteractionController>
 
     void _EnableMode(string name)
     {
-        if (interactionModes[name])
+        GameObject modeObject;
+        if (interactionModes.TryGetValue(name, out modeObject))
         {
-            StartCoroutine(ChangeMode(interactionModes[name]));
+            StartCoroutine(ChangeMode(modeObject));
         }
         else
         {

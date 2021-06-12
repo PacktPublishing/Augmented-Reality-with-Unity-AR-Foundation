@@ -27,7 +27,8 @@ public class UIController : Singleton<UIController>
 
     void _ShowUI(string name)
     {
-        if (uiPanels[name])
+        CanvasGroup panel;
+        if (uiPanels.TryGetValue(name, out panel))
         {
             ChangeUI(uiPanels[name]);
         }

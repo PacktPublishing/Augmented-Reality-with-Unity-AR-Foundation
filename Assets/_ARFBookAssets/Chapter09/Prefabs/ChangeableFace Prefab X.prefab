@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 409972353005871922}
   - component: {fileID: -5192128026688516305}
   m_Layer: 0
-  m_Name: ChangeableFace Prefab
+  m_Name: ChangeableFace Prefab X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
