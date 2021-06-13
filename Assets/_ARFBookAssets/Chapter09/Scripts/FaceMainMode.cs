@@ -15,19 +15,25 @@ public class FaceMainMode : MonoBehaviour
 
     public void ChangeFaceMaterial(Material mat)
     {
-        StartCoroutine(_DoChangeFaceMaterial(mat));
+        if (faceManager.facePrefab != materialzeablePrefab)
+        {
+           StartCoroutine(_DoChangeFacePrefab(materialzeablePrefab, mat));
+        }
+        else
+        {
+            _ChangeTrackablesMaterial(mat);
+        }
     }
 
-    IEnumerator _DoChangeFaceMaterial(Material mat)
+    void _ChangeTrackablesMaterial(Material mat)
     {
-        yield return ChangeFacePrefab(materialzeablePrefab);
-
         foreach (ARFace trackable in faceManager.trackables)
         {
             ChangeableFace changeable = trackable.GetComponent<ChangeableFace>();
             changeable.ChangeMaterial(mat);
         }
     }
+
     public void ChangeFacePrefab(GameObject prefab)
     {
         if (faceManager.facePrefab != prefab)
@@ -59,7 +65,7 @@ public class FaceMainMode : MonoBehaviour
     //    }
     //}
 
-    IEnumerator _DoChangeFacePrefab(GameObject prefab)
+    IEnumerator _DoChangeFacePrefab(GameObject prefab, Material mat = null)
     {
         GameObject sessionOrigin = faceManager.gameObject;
         foreach (ARFace trackable in faceManager.trackables)
@@ -70,6 +76,14 @@ public class FaceMainMode : MonoBehaviour
         yield return null;
         faceManager = sessionOrigin.AddComponent<ARFaceManager>() as ARFaceManager;
         faceManager.facePrefab = prefab;
+        if (mat)
+        {
+            while (faceManager.trackables.count == 0)
+            {
+                yield return null;
+            }
+            _ChangeTrackablesMaterial(mat);
+        }
     }
 
  
