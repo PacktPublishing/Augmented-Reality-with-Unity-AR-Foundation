@@ -6,7 +6,7 @@ using UnityEngine.XR.ARSubsystems;
 
 namespace UnityEngine.XR.ARFoundation.Samples
 {
-    #if UNITY_ANDROID && !UNITY_EDITOR
+    #if UNITY_ANDROID //&& !UNITY_EDITOR
     using UnityEngine.XR.ARCore;
     #endif
 
@@ -36,7 +36,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         ARSessionOrigin m_SessionOrigin;
 
-    #if UNITY_ANDROID && !UNITY_EDITOR
+    #if UNITY_ANDROID //&& !UNITY_EDITOR
         NativeArray<ARCoreFaceRegionData> m_FaceRegions;
 
         Dictionary<TrackableId, Dictionary<ARCoreFaceRegion, GameObject>> m_InstantiatedPrefabs;
@@ -55,7 +55,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         // Update is called once per frame
         void Update()
         {
-    #if UNITY_ANDROID && !UNITY_EDITOR
+    #if UNITY_ANDROID //&& !UNITY_EDITOR
             var subsystem = (ARCoreFaceSubsystem)m_FaceManager.subsystem;
             if (subsystem == null)
                 return;

@@ -3080,6 +3080,7 @@ GameObject:
   - component: {fileID: 1558300128}
   - component: {fileID: 1558300130}
   - component: {fileID: 1558300129}
+  - component: {fileID: 1558300131}
   m_Layer: 0
   m_Name: Main Mode
   m_TagString: Untagged
@@ -3127,6 +3128,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed95c1a488e35394da3bb88ce7193f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1558300131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558300127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd351f9476c32284ca2e63373395555b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nosetipPrefab: {fileID: 3961799035911009573, guid: 361b1cf5e135db14c950375c56d957b4, type: 3}
+  foreheadLeftPrefab: {fileID: 3961799035911009573, guid: 7ced2c434c330374584d54ccd0e8e4ec, type: 3}
+  foreheadRightPrefab: {fileID: 3961799035911009573, guid: 04b9a222bb93109409983d4ddc212b6f, type: 3}
+  faceManager: {fileID: 1565265813}
 --- !u!1 &1558906532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,7 +3341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caeceacb624484daf8e379c2252fd246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FacePrefab: {fileID: 3190010580146568014, guid: b54aed1227baf9d49958e1b20e98c407, type: 3}
+  m_FacePrefab: {fileID: 8584377291682160418, guid: c7dc068f2dd626744bb40cd22abefb8a, type: 3}
   m_MaximumFaceCount: 1
 --- !u!114 &1565265815
 MonoBehaviour:
