@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 8826380083283590222}
   - component: {fileID: 1075427300203739990}
   - component: {fileID: 2999246832077653774}
+  - component: {fileID: 2860286184340036932}
   m_Layer: 0
-  m_Name: Materializeable Face Prefab
+  m_Name: Changable Face Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,3 +137,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a8ce49949723c4283ed5db6050303e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2860286184340036932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190010580146568014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2548a2856c1ee4103848bf2b4440e3f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EyePrefab: {fileID: 6445980456080375546, guid: e871df24c85958a4a973f7c7d7b4395e, type: 3}
