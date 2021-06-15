@@ -2,11 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+#if UNITY_ANDROID
+using UnityEngine.XR.ARCore;
+#endif
 
 public class FaceMainMode : MonoBehaviour
 {
     [SerializeField] GameObject materialzeablePrefab; // eg AR Default Prefab
+    [SerializeField] GameObject attachablePrefab;
     [SerializeField] ARFaceManager faceManager;
+
+    FacePoseAttachment poseAttachment;
+    FaceRegionAttachments regionAttachments;
+
+    void Start()
+    {
+        poseAttachment = GetComponent<FacePoseAttachment>();
+        regionAttachments = GetComponent<FaceRegionAttachments>();
+    }
 
     void OnEnable()
     {
@@ -17,7 +30,7 @@ public class FaceMainMode : MonoBehaviour
     {
         if (faceManager.facePrefab != materialzeablePrefab)
         {
-           StartCoroutine(_DoChangeFacePrefab(materialzeablePrefab, mat));
+            StartCoroutine(_DoChangeFacePrefab(materialzeablePrefab, mat));
         }
         else
         {
@@ -29,6 +42,7 @@ public class FaceMainMode : MonoBehaviour
     {
         foreach (ARFace trackable in faceManager.trackables)
         {
+            if (!trackable.gameObject.activeInHierarchy) continue;
             ChangeableFace changeable = trackable.GetComponent<ChangeableFace>();
             changeable.ChangeMaterial(mat);
         }
@@ -42,30 +56,7 @@ public class FaceMainMode : MonoBehaviour
         }
     }
 
-    //IEnumerator _DoChangeFacePrefab(GameObject prefab)
-    //{
-    //    faceManager.facePrefab = prefab;
-    //    //faceManager.enabled = false;
-    //    faceManager.gameObject.SetActive(false);
-    //    yield return null;
-    //    //faceManager.enabled = true;
-    //    faceManager.gameObject.SetActive(true);
-    //}
-
-    //public void ChangeFacePrefab(GameObject prefab)
-    //{
-    //    foreach (ARFace trackable in faceManager.trackables)
-    //    {
-    //        for (int i = trackable.transform.childCount - 1; i >= 0; i--)
-    //        {
-    //            GameObject.Destroy(trackable.transform.GetChild(i).gameObject);
-    //        }
-    //        GameObject newFace = Instantiate(prefab);
-    //        prefab.transform.SetParent(trackable.transform);
-    //    }
-    //}
-
-    IEnumerator _DoChangeFacePrefab(GameObject prefab, Material mat = null)
+    IEnumerator _DoChangeFacePrefab(GameObject prefab, Material mat = null, int attachmentIndex = -1)
     {
         GameObject sessionOrigin = faceManager.gameObject;
         foreach (ARFace trackable in faceManager.trackables)
@@ -74,8 +65,10 @@ public class FaceMainMode : MonoBehaviour
         }
         Destroy(faceManager);
         yield return null;
+
         faceManager = sessionOrigin.AddComponent<ARFaceManager>() as ARFaceManager;
         faceManager.facePrefab = prefab;
+
         if (mat)
         {
             while (faceManager.trackables.count == 0)
@@ -84,15 +77,30 @@ public class FaceMainMode : MonoBehaviour
             }
             _ChangeTrackablesMaterial(mat);
         }
+
+        poseAttachment.Clear();
+
+        regionAttachments.Clear();
+        if (attachmentIndex >= 0)
+        {
+            regionAttachments.AddAttachments(attachmentIndex);
+        }
     }
 
- 
-    //public void ChangeFaceObject(string name)
-    //{
-    //    foreach (ARFace trackable in faceManager.trackables)
-    //    {
-    //        ChangeableFace changeable = trackable.GetComponent<ChangeableFace>();
-    //        changeable.ChangeFace(name);
-    //    }
-    //}
+    public void ChangeFaceAttachment(GameObject prefab)
+    {
+        poseAttachment.SetAttachment(prefab);
+    }
+
+    public void ChangeRegionAttachment(int attachmentIndex)
+    {
+        if (faceManager.facePrefab != attachablePrefab)
+        {
+            StartCoroutine(_DoChangeFacePrefab(attachablePrefab, null, attachmentIndex));
+        }
+        else
+        {
+           regionAttachments.AddAttachments(attachmentIndex);
+        }
+    }
 }

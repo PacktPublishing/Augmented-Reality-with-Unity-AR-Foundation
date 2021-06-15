@@ -4,82 +4,113 @@ using UnityEngine;
 using Unity.Collections;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-#if UNITY_ANDROID
+#if UNITY_ANDROID && !UNITY_EDITOR
 using UnityEngine.XR.ARCore;
 #endif
 
-public class FaceRegionAttachments : MonoBehaviour
+[System.Serializable]
+public struct AttachmentPrefabs
 {
-    public GameObject nosetipPrefab;
+    public GameObject nosePrefab;
     public GameObject foreheadLeftPrefab;
     public GameObject foreheadRightPrefab;
-    [SerializeField] ARFaceManager faceManager;
+}
 
-    GameObject nosetipObj;
+public class FaceRegionAttachments : MonoBehaviour
+{
+    [SerializeField] ARFaceManager faceManager;
+    [SerializeField] AttachmentPrefabs[] attachmentPrefabs;
+
+    // only allow one of each 
+    GameObject noseObj;
     GameObject foreheadLeftObj;
     GameObject foreheadRightObj;
 
-#if UNITY_ANDROID
+#if UNITY_ANDROID && !UNITY_EDITOR
     NativeArray<ARCoreFaceRegionData> faceRegions;
 #endif
 
-    private void Start()
-    {
-        Refresh();
-    }
-
     public void Clear()
     {
-        Destroy(nosetipObj);
-        nosetipObj = null;
-        Destroy(foreheadLeftObj);
-        foreheadLeftObj = null;
-        Destroy(foreheadRightObj);
-        foreheadRightObj = null;
+        if (noseObj)
+        {
+            Destroy(noseObj);
+            noseObj = null;
+        }
+        if (foreheadLeftObj)
+        {
+            Destroy(foreheadLeftObj);
+            foreheadLeftObj = null;
+        }
+        if (foreheadRightObj)
+        {
+            Destroy(foreheadRightObj);
+            foreheadRightObj = null;
+        }
     }
 
-    public void Refresh()
+    public void AddAttachments(int index)
     {
-        Clear();
-        if (nosetipPrefab)
+        Debug.Log("adding attachment " + index);
+
+        if (index < 0 || index >= attachmentPrefabs.Length)
         {
-            nosetipObj = Instantiate(nosetipPrefab);
+            Debug.LogError($"index out of range: {index}");
+            return;
         }
-        if (foreheadLeftPrefab)
+        if (attachmentPrefabs[index].nosePrefab != null)
         {
-            foreheadLeftObj = Instantiate(foreheadLeftPrefab);
+            if (noseObj) Destroy(noseObj);
+            noseObj = Instantiate(attachmentPrefabs[index].nosePrefab);
         }
-        if (foreheadRightPrefab)
+        if (attachmentPrefabs[index].foreheadLeftPrefab != null)
         {
-            foreheadRightObj = Instantiate(foreheadRightPrefab);
+            if (foreheadLeftObj) Destroy(foreheadLeftObj);
+            foreheadLeftObj = Instantiate(attachmentPrefabs[index].foreheadLeftPrefab);
+        }
+        if (attachmentPrefabs[index].foreheadRightPrefab != null)
+        {
+            if (foreheadRightObj) Destroy(foreheadRightObj);
+            foreheadRightObj = Instantiate(attachmentPrefabs[index].foreheadRightPrefab);
         }
     }
+
 
     void Update()
     {
-#if UNITY_ANDROID
+        if (!noseObj && !foreheadLeftObj && !foreheadRightObj)
+            return;
+
+        if (faceManager == null)
+        {
+            Debug.Log("faceManager is null, enabled " + this.enabled);
+            faceManager = FindObjectOfType<ARFaceManager>();
+        }
+#if UNITY_ANDROID && !UNITY_EDITOR
         var subsystem = (ARCoreFaceSubsystem)faceManager.subsystem;
         if (subsystem == null)
             return;
 
         foreach (ARFace face in faceManager.trackables)
         {
+            //if (!face.gameObject.activeInHierarchy) continue;
             subsystem.GetRegionPoses(face.trackableId, Allocator.Persistent, ref faceRegions);
             for (int i = 0; i < faceRegions.Length; ++i)
             {
                 switch (faceRegions[i].region)
                 {
                     case ARCoreFaceRegion.NoseTip:
-                        if (nosetipObj)
+                        if (noseObj)
                         {
-                            nosetipObj.transform.localPosition = faceRegions[i].pose.position;
+                            noseObj.transform.localPosition = faceRegions[i].pose.position;
                         }
-                        break;
+                         break;
                     case ARCoreFaceRegion.ForeheadLeft:
                         if (foreheadLeftObj)
                         {
                             foreheadLeftObj.transform.localPosition = faceRegions[i].pose.position;
                         }
+
                         break;
                     case ARCoreFaceRegion.ForeheadRight:
                         if (foreheadRightObj)
@@ -89,13 +120,14 @@ public class FaceRegionAttachments : MonoBehaviour
                         break;
                 }
             }
+            break; // only one
         }
 #endif
     }
 
     void OnDestroy()
     {
-#if UNITY_ANDROID
+#if UNITY_ANDROID && !UNITY_EDITOR
         if (faceRegions.IsCreated)
             faceRegions.Dispose();
 #endif

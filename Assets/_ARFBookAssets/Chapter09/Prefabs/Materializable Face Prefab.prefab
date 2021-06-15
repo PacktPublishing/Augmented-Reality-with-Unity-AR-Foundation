@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2999246832077653774}
   - component: {fileID: 2860286184340036932}
   m_Layer: 0
-  m_Name: Changable Face Prefab
+  m_Name: Materializable Face Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
