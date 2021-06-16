@@ -24,8 +24,28 @@ public class FaceMainMode : MonoBehaviour
         }
     }
 
+    public void AddAccessory(GameObject prefab)
+    {
+        foreach (ARFace face in faceManager.trackables)
+        {
+            ChangeableFace changeable = face.GetComponent<ChangeableFace>();
+            if (changeable != null)
+            {
+                changeable.AddAccessory(prefab);
+            }
+        }
+    }
+
     public void ResetFace()
     {
-        ChangePosePrefab(null);
+        foreach (ARFace face in faceManager.trackables)
+        {
+            ChangeableFace changeable = face.GetComponent<ChangeableFace>();
+            if (changeable != null)
+            {
+                changeable.SetPosePrefab(null);
+                changeable.ResetAccessories();
+            }
+        }
     }
 }
