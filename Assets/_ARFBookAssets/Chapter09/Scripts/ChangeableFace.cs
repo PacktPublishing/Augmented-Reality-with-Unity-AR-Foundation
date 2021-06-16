@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RotaryHeart.Lib.SerializableDictionary;
-
-[System.Serializable]
-public class FaceObjectbDictionary : SerializableDictionaryBase<string, GameObject> { }
 
 public class ChangeableFace : MonoBehaviour
 {
+    GameObject currentPosePrefab;
+    GameObject poseObj;
 
-    public void ChangeMaterial(Material mat)
+    public void SetPosePrefab(GameObject prefab)
     {
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer)
-           renderer.material = mat;
-    }
+        if (prefab == currentPosePrefab)
+            return;
 
+        if (poseObj != null) 
+            Destroy(poseObj);
+
+       currentPosePrefab = prefab;
+       if (prefab != null)
+            poseObj = Instantiate(prefab, transform, false);
+    }
 }
