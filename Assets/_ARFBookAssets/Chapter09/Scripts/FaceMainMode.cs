@@ -23,4 +23,9 @@ public class FaceMainMode : MonoBehaviour
             }
         }
     }
+
+    public void ResetFace()
+    {
+        ChangePosePrefab(null);
+    }
 }
