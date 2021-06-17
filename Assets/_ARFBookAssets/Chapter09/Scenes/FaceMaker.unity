@@ -660,6 +660,7 @@ GameObject:
   - component: {fileID: 177217244}
   - component: {fileID: 177217243}
   - component: {fileID: 177217242}
+  - component: {fileID: 177217245}
   m_Layer: 5
   m_Name: Lips Button
   m_TagString: Untagged
@@ -780,6 +781,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177217240}
   m_CullTransparentMesh: 1
+--- !u!114 &177217245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177217240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8247af6efe76240bf5e0592a46deaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &249537052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,6 +2294,7 @@ GameObject:
   - component: {fileID: 1036482574}
   - component: {fileID: 1036482573}
   - component: {fileID: 1036482572}
+  - component: {fileID: 1036482575}
   m_Layer: 5
   m_Name: Eyebrows Button
   m_TagString: Untagged
@@ -2413,6 +2427,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036482570}
   m_CullTransparentMesh: 1
+--- !u!114 &1036482575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036482570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8247af6efe76240bf5e0592a46deaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1138345738
 GameObject:
   m_ObjectHideFlags: 0
@@ -3595,6 +3621,7 @@ GameObject:
   - component: {fileID: 1878572838}
   - component: {fileID: 1878572837}
   - component: {fileID: 1878572836}
+  - component: {fileID: 1878572839}
   m_Layer: 5
   m_Name: Mustache Button
   m_TagString: Untagged
@@ -3715,6 +3742,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878572834}
   m_CullTransparentMesh: 1
+--- !u!114 &1878572839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878572834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8247af6efe76240bf5e0592a46deaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1911734578
 GameObject:
   m_ObjectHideFlags: 0

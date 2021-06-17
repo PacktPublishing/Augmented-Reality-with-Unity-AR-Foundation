@@ -69,35 +69,27 @@ public class FaceMainMode : MonoBehaviour
 
     public void SetNoseAttachment(GameObject prefab)
     {
-        foreach (ARFace face in faceManager.trackables)
-        {
-            FaceRegionAttachments regionAttachments = face.GetComponent<FaceRegionAttachments>();
-            if (regionAttachments != null)
-            {
-                regionAttachments.SetRegionAttachment(ARCoreFaceRegion.NoseTip, prefab);
-            }
-        }
+        SetRegionAttachment(ARCoreFaceRegion.NoseTip, prefab);
     }
 
     public void SetForeheadLeftAttachment(GameObject prefab)
     {
-        foreach (ARFace face in faceManager.trackables)
-        {
-            FaceRegionAttachments regionAttachments = face.GetComponent<FaceRegionAttachments>();
-            if (regionAttachments != null)
-            {
-                regionAttachments.SetRegionAttachment(ARCoreFaceRegion.ForeheadLeft, prefab);
-            }
-        }
+        SetRegionAttachment(ARCoreFaceRegion.ForeheadLeft, prefab);
     }
+
     public void SetForeheadRightAttachment(GameObject prefab)
+    {
+        SetRegionAttachment(ARCoreFaceRegion.ForeheadRight, prefab);
+    }
+
+    private void SetRegionAttachment(ARCoreFaceRegion region, GameObject prefab)
     {
         foreach (ARFace face in faceManager.trackables)
         {
             FaceRegionAttachments regionAttachments = face.GetComponent<FaceRegionAttachments>();
             if (regionAttachments != null)
             {
-                regionAttachments.SetRegionAttachment(ARCoreFaceRegion.ForeheadRight, prefab);
+                regionAttachments.SetRegionAttachment(region, prefab);
             }
         }
     }

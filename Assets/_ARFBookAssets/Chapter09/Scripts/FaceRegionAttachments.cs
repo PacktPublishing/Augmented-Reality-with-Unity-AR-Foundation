@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Collections;
 using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
 #if UNITY_ANDROID
 using UnityEngine.XR.ARCore;
 #endif
@@ -16,7 +15,7 @@ public class FaceRegionAttachments : MonoBehaviour
     Dictionary<ARCoreFaceRegion, GameObject> prefabs = new Dictionary<ARCoreFaceRegion, GameObject>();
     Dictionary<ARCoreFaceRegion, GameObject> objs = new Dictionary<ARCoreFaceRegion, GameObject>();
 
-#if UNITY_ANDROID //&& !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
     NativeArray<ARCoreFaceRegionData> faceRegions;
 #endif
 
@@ -49,14 +48,14 @@ public class FaceRegionAttachments : MonoBehaviour
         foreach (ARCoreFaceRegion region in objs.Keys)
         {
             Destroy(objs[region]);
-            objs.Remove(region);
-            prefabs.Remove(region);
         }
+        objs.Clear();
+        prefabs.Clear();
     }
 
     private void Update()
     {
-#if UNITY_ANDROID // && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
         var subsystem = (ARCoreFaceSubsystem)faceManager.subsystem;
         if (subsystem == null)
             return;
@@ -76,7 +75,7 @@ public class FaceRegionAttachments : MonoBehaviour
 
     void OnDestroy()
     {
-#if UNITY_ANDROID //&& !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
         if (faceRegions.IsCreated)
             faceRegions.Dispose();
 #endif
