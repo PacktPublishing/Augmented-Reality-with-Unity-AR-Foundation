@@ -13,12 +13,12 @@ public class FaceMainModeX : MonoBehaviour
     [SerializeField] ARFaceManager faceManager;
 
     FacePoseAttachment poseAttachment;
-    FaceRegionAttachments regionAttachments;
+    FaceRegionAttachmentsX regionAttachments;
 
     void Start()
     {
         poseAttachment = GetComponent<FacePoseAttachment>();
-        regionAttachments = GetComponent<FaceRegionAttachments>();
+        regionAttachments = GetComponent<FaceRegionAttachmentsX>();
     }
 
     void OnEnable()

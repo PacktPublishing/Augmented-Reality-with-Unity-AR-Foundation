@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class ChangeableFace : MonoBehaviour
 {
@@ -8,6 +9,17 @@ public class ChangeableFace : MonoBehaviour
     GameObject poseObj;
 
     Dictionary<GameObject, GameObject> accessories = new Dictionary<GameObject, GameObject>();
+
+    ARFaceMeshVisualizer meshVisualizer;
+    MeshRenderer renderer;
+
+    private void Start()
+    {
+        meshVisualizer = GetComponent<ARFaceMeshVisualizer>();
+        meshVisualizer.enabled = false;
+        renderer = GetComponent<MeshRenderer>();
+        renderer.enabled = false;
+    }
 
     public void SetPosePrefab(GameObject prefab)
     {
@@ -47,5 +59,19 @@ public class ChangeableFace : MonoBehaviour
         {
             accessories[prefab].SetActive(false);
         }
+    }
+
+    public void SetMeshMaterial(Material mat)
+    {
+        if (mat == null)
+        {
+            meshVisualizer.enabled = false;
+            renderer.enabled = false;
+            return;
+        }
+
+        renderer.material = mat;
+        meshVisualizer.enabled = true;
+        renderer.enabled = true;
     }
 }

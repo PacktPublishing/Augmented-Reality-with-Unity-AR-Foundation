@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity.Collections;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-#if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID //&& !UNITY_EDITOR
 using UnityEngine.XR.ARCore;
 #endif
 
@@ -16,7 +16,7 @@ public struct AttachmentPrefabs
     public GameObject foreheadRightPrefab;
 }
 
-public class FaceRegionAttachments : MonoBehaviour
+public class FaceRegionAttachmentsX : MonoBehaviour
 {
     [SerializeField] ARFaceManager faceManager;
     [SerializeField] AttachmentPrefabs[] attachmentPrefabs;
@@ -26,7 +26,7 @@ public class FaceRegionAttachments : MonoBehaviour
     GameObject foreheadLeftObj;
     GameObject foreheadRightObj;
 
-#if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID //&& !UNITY_EDITOR
     NativeArray<ARCoreFaceRegionData> faceRegions;
 #endif
 
@@ -86,7 +86,7 @@ public class FaceRegionAttachments : MonoBehaviour
             Debug.Log("faceManager is null, enabled " + this.enabled);
             faceManager = FindObjectOfType<ARFaceManager>();
         }
-#if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID //&& !UNITY_EDITOR
         var subsystem = (ARCoreFaceSubsystem)faceManager.subsystem;
         if (subsystem == null)
             return;
@@ -127,7 +127,7 @@ public class FaceRegionAttachments : MonoBehaviour
 
     void OnDestroy()
     {
-#if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID //&& !UNITY_EDITOR
         if (faceRegions.IsCreated)
             faceRegions.Dispose();
 #endif
