@@ -40,7 +40,7 @@ This project requires the following third-party asset packages:
 - Serialized Dictionary Lite (free): https://assetstore.unity.com/packages/tools/utilities/serialized-dictionary-lite-110992
 - DOTween (free): https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676
 
-### Suggested Third Pary Assets:
+### Suggested Third Party Assets:
 
 - Lunar Mobile Console (free): https://assetstore.unity.com/packages/p/lunar-mobile-console-free-82881
 - AR Foundation Editor Remote ($$): https://assetstore.unity.com/packages/tools/utilities/ar-foundation-editor-remote-168773 (does not work with new Input System)
