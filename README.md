@@ -1,8 +1,56 @@
-# Augmented-Reality-with-Unity-AR-Foundation
+# Augmented Reality with Unity AR Foundation
 
-Augmented Reality with Unity AR Foundation,
-author, Jonathan Linowes, jonathan@parkerhill.com
-published by Packt
+<a href="https://www.packtpub.com/product/augmented-reality-with-unity-ar-foundation/9781838982591"><img src="https://static.packt-cdn.com/products/9781838982591/cover/smaller" alt="Augmented Reality with Unity AR Foundation" height="256px" align="right"></a>
+
+This is the code repository for [Augmented Reality with Unity AR Foundation](https://www.packtpub.com/product/augmented-reality-with-unity-ar-foundation/9781838982591), published by Packt.
+
+**A practical guide to cross-platform AR development with Unity 2020 and later versions**
+
+## What is this book about?
+	Augmented reality applications allow people to interact meaningfully with the real world through digitally enhanced content. Unity AR Foundation enables developers to create augmented reality applications and games for a variety of target devices. If you want to develop your own AR apps using Unity, AR Foundation is the most powerful and flexible platform you can use.
+
+This book covers the following exciting features: 
+* Discover Unity engine features for building AR applications and games
+* Get up to speed with Unity AR Foundation components and the Unity API
+* Build a variety of AR projects using best practices and important AR user experiences
+* Understand core concepts of augmented reality technology and development for real-world projects
+* Set up your system for AR development and learn to improve your development workflow
+
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/) today!
+
+<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
+alt="https://www.packtpub.com/" border="5" /></a>
+
+
+## Instructions and Navigations
+All of the code is organized into folders. For example, Chapter02.
+
+The code will look like the following:
+```
+public class TestInputSystem : MonoBehaviour
+{
+    private void Awake()
+    {
+        
+    }
+    public void OnPlaceObject(InputValue value)
+    {
+        Debug.Log("*** in OnPlaceObject");
+    }
+}
+```
+
+**Following is what you need for this book:**
+Copy and paste the Audience section from the EPIC.
+
+With the following software and hardware list you can run all code files present in the book (Chapter 1-15).
+
+### Software and Hardware List
+
+| Chapter  | Software required                   | OS required                        |
+| -------- | ------------------------------------| -----------------------------------|
+| 1-9       |  Unity 2020.3 LTS                 | Windows, Mac OS X, and Linux (Any) |
+
 
 ## Getting Started
 
@@ -60,3 +108,20 @@ Onboarding UX dependencies:
 
 - Addressables
 - Localization
+
+
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [https://static.packt-cdn.com/downloads/9781838982591_ColorImages.pdf).
+
+### Related products <Other books you may enjoy>
+* Game Development Patterns with Unity 2021 - Second Edition [[Packt]](https://www.packtpub.com/product/unity-2020-virtual-reality-projects-third-edition/9781839217333) [[Amazon]](https://www.amazon.com/dp/1800200811)
+
+* Unity 2020 Virtual Reality Projects - Third Edition [[Packt]](https://www.packtpub.com/product/unity-2020-virtual-reality-projects-third-edition/9781839217333) [[Amazon]](https://www.amazon.com/dp/1839217332)
+
+## Get to Know the Author
+**Jonathan Linowes**
+is a VR/AR enthusiast, Unity and full stack developer, entrepreneur, Certified Unity Instructor, and owner of Parkerhill XR Studio, an immersive media, applications, and game developer. Jonathan has a Bachelor of Fine Arts degree from Syracuse University, a Master of Science degree from the MIT Media Lab, and has held technical leadership positions at Autodesk and other companies. He has authored multiple books on VR and AR from Packt Publishing.
+
+## Other books by the authors
+* [Unity Virtual Reality Projects - Second Edition](https://www.packtpub.com/product/unity-virtual-reality-projects-second-edition/9781788478809)
+* [Unity Virtual Reality Projects](https://www.packtpub.com/product/unity-virtual-reality-projects/9781783988556)
+
