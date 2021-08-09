@@ -122,6 +122,9 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 is a VR/AR enthusiast, Unity and full stack developer, entrepreneur, Certified Unity Instructor, and owner of Parkerhill XR Studio, an immersive media, applications, and game developer. Jonathan has a Bachelor of Fine Arts degree from Syracuse University, a Master of Science degree from the MIT Media Lab, and has held technical leadership positions at Autodesk and other companies. He has authored multiple books on VR and AR from Packt Publishing.
 
 ## Other books by the authors
+* [Unity 2020 Virtual Reality Projects - Third Edition](https://www.packtpub.com/product/unity-2020-virtual-reality-projects-third-edition/9781839217333)	
 * [Unity Virtual Reality Projects - Second Edition](https://www.packtpub.com/product/unity-virtual-reality-projects-second-edition/9781788478809)
 * [Unity Virtual Reality Projects](https://www.packtpub.com/product/unity-virtual-reality-projects/9781783988556)
+* [Augmented Reality for Developers](https://www.packtpub.com/product/augmented-reality-for-developers/9781787286436)
+* [Cardboard VR Projects for Android](https://www.packtpub.com/product/cardboard-vr-projects-for-android/9781785887871)
 
