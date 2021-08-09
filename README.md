@@ -7,7 +7,7 @@ This is the code repository for [Augmented Reality with Unity AR Foundation](htt
 **A practical guide to cross-platform AR development with Unity 2020 and later versions**
 
 ## What is this book about?
-	Augmented reality applications allow people to interact meaningfully with the real world through digitally enhanced content. Unity AR Foundation enables developers to create augmented reality applications and games for a variety of target devices. If you want to develop your own AR apps using Unity, AR Foundation is the most powerful and flexible platform you can use.
+Augmented reality applications allow people to interact meaningfully with the real world through digitally enhanced content. Unity AR Foundation enables developers to create augmented reality applications and games for a variety of target devices. If you want to develop your own AR apps using Unity, AR Foundation is the most powerful and flexible platform you can use.
 
 This book covers the following exciting features: 
 * Discover Unity engine features for building AR applications and games
