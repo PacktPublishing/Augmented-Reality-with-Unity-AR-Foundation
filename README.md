@@ -41,7 +41,7 @@ public class TestInputSystem : MonoBehaviour
 ```
 
 **Following is what you need for this book:**
-Copy and paste the Audience section from the EPIC.
+This augmented reality book is for game developers interested in adding AR capabilities to their games and apps. The book assumes beginner-level knowledge of Unity development and C# programming, familiarity with 3D graphics, and experience in using existing AR applications. Beginner-level experience in developing mobile applications will be helpful to get the most out of this AR Unity book.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-9).
 
