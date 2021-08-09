@@ -43,7 +43,7 @@ public class TestInputSystem : MonoBehaviour
 **Following is what you need for this book:**
 Copy and paste the Audience section from the EPIC.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-15).
+With the following software and hardware list you can run all code files present in the book (Chapter 1-9).
 
 ### Software and Hardware List
 
@@ -110,7 +110,7 @@ Onboarding UX dependencies:
 - Localization
 
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [https://static.packt-cdn.com/downloads/9781838982591_ColorImages.pdf).
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781838982591_ColorImages.pdf).
 
 ### Related products <Other books you may enjoy>
 * Game Development Patterns with Unity 2021 - Second Edition [[Packt]](https://www.packtpub.com/product/unity-2020-virtual-reality-projects-third-edition/9781839217333) [[Amazon]](https://www.amazon.com/dp/1800200811)
