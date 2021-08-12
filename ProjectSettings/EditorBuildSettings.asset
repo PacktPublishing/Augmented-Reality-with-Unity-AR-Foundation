@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/_ARFBookAssets/Chapter02/Scenes/BasicARScene.unity
     guid: c6723769b1fd1ea47be0c2efd1036c75
   - enabled: 1
+    path: Assets/_ARFBookAssets/Chapter03/Scenes/DebugScene.unity
+    guid: b07e16dcec8030742a043faa557cbff9
+  - enabled: 1
     path: Assets/_ARFBookAssets/Chapter04/Scenes/ARFramework.unity
     guid: 9e1d7b686db38924c998b60c8431e6bc
   - enabled: 1
