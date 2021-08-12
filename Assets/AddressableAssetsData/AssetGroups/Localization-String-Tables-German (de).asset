@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-String-Tables-English
+  m_Name: Localization-String-Tables-German (de)
   m_EditorClassIdentifier: 
-  m_GroupName: Localization-String-Tables-English
+  m_GroupName: Localization-String-Tables-German (de)
   m_Data:
     m_SerializedData: []
-  m_GUID: ab67796760fbc21488a62e3bed3fd0d3
+  m_GUID: d6ede93002d42e04281760df5a5085a7
   m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 405f0df7fdddbea418286ca3ca0a3616, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: ed2ce670a3c97714ea23bdbe595d067f, type: 2}
-    - {fileID: 11400000, guid: e20897e3671bd2c48b072d75d792cfcf, type: 2}
+    - {fileID: 11400000, guid: 491c23b27f0f09b4b820871aeeb21b8d, type: 2}
+    - {fileID: 11400000, guid: 48cbe6596c58e6048bca8e83c11ad631, type: 2}

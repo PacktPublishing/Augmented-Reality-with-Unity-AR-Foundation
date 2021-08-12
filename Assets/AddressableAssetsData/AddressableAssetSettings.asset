@@ -23,6 +23,8 @@ MonoBehaviour:
   m_NonRecursiveBuilding: 0
   m_maxConcurrentWebRequests: 500
   m_ContiguousBundles: 0
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
   m_ShaderBundleNaming: 0
   m_ShaderBundleCustomNaming: 
   m_MonoScriptBundleNaming: 0
@@ -51,6 +53,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4404be0f375f6d04687e81340443dccd, type: 2}
   - {fileID: 11400000, guid: eedc4dc315f6ace47bbdc0dc2a92406d, type: 2}
   - {fileID: 11400000, guid: 0e80f304939c2464b9b393451d180f77, type: 2}
+  - {fileID: 11400000, guid: 49be9b72d530e461d8d72f01e25c745f, type: 2}
+  - {fileID: 11400000, guid: 6ed87cb7dcc394943aa7825c3ccb125c, type: 2}
+  - {fileID: 11400000, guid: 576c52bb08ca9f84eb418218e4219f70, type: 2}
+  - {fileID: 11400000, guid: 0c37e9df9bdedd949928ad70027f2dd2, type: 2}
+  - {fileID: 11400000, guid: 5a6af5d1dc387ba4eb645c5680789b89, type: 2}
+  - {fileID: 11400000, guid: 0b95bcda2e0748840970cb5cd2aaecc5, type: 2}
+  - {fileID: 11400000, guid: f52b3e8c6d4f9a642b0a4b7578ca5b59, type: 2}
+  - {fileID: 11400000, guid: 7ac9786a69af49f478a95eff27051795, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1

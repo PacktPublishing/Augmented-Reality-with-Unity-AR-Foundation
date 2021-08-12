@@ -5,28 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/_ARFBookAssets/MainMenu/MainScene.unity
+    guid: 1d6d39c035a0c594a8a31de78ddd2f41
   - enabled: 0
     path: Assets/ARF-samples/Scenes/SimpleAR/SimpleAR.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/_ARFBookAssets/Chapter02/Scenes/BasicARScene.unity
     guid: c6723769b1fd1ea47be0c2efd1036c75
-  - enabled: 0
+  - enabled: 1
     path: Assets/_ARFBookAssets/Chapter04/Scenes/ARFramework.unity
     guid: 9e1d7b686db38924c998b60c8431e6bc
   - enabled: 1
     path: Assets/_ARFBookAssets/Chapter05/Scenes/FrameworkDemo.unity
     guid: e270d86cd500a26449123fc80973b11f
-  - enabled: 0
+  - enabled: 1
     path: Assets/_ARFBookAssets/Chapter06/Scenes/ARGallery.unity
     guid: aa19d614e20173242abcd7dea3bfeb15
-  - enabled: 0
+  - enabled: 1
     path: Assets/_ARFBookAssets/Chapter07/Scenes/ARGallery07.unity
     guid: 3d39f4cdf066eb34fb5c96f9e7dc433a
-  - enabled: 0
+  - enabled: 1
     path: Assets/_ARFBookAssets/Chapter08/Scenes/PlanetsScene.unity
     guid: 3f821ac8510163d4fa6185604c0d4faa
-  - enabled: 0
+  - enabled: 1
     path: Assets/_ARFBookAssets/Chapter09/Scenes/FaceMaker.unity
     guid: ee129a9adb6b6054582d6d5bf34be416
   m_configObjects:
