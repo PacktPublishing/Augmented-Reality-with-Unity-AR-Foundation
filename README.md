@@ -128,3 +128,7 @@ is a VR/AR enthusiast, Unity and full stack developer, entrepreneur, Certified U
 * [Augmented Reality for Developers](https://www.packtpub.com/product/augmented-reality-for-developers/9781787286436)
 * [Cardboard VR Projects for Android](https://www.packtpub.com/product/cardboard-vr-projects-for-android/9781785887871)
 
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781838982591">https://packt.link/free-ebook/9781838982591 </a> </p>
